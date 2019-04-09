@@ -2,8 +2,8 @@
 var colorBall = "#CBFE5B"
 var colorGreenHand="#1DA06E";
 var colorWhiteHand="#FFFFFF";
-var steptime = 2000;
-var password = "712519";
+var steptime = 1000;
+var password = "";
 //中英文切换
 var AppName = "Alipay"; //支付宝
 var Name = "Ant Forest"; //蚂蚁森林
@@ -136,7 +136,9 @@ function enterOthers(){
                 back();
             }
             else{
-                swipe(520,2000,520,1800,1000);
+                if(antY-800>0)
+                    swipe(520,antY,520,500,1000);
+                else swipe(520,2000,520,1800,1000);
             }
         }
         sleep(steptime);
